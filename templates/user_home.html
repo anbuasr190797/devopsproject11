@@ -6,7 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Sports Club Management</title>
+  <title>NCI Play Time</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"> -->
 
@@ -19,12 +19,30 @@
 </head>
 
 <body>
-<div class="container-fluid header text-center">
-  Sports Club Management<br>
-  Welcome {{ name }}<br>
-  <a href="{% url 'scmapp:user_logout' %}" style="font-size:20;">Logout</a><br>
-  <span style="font-size:18px">{{ status }}</span>
+  <nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd; data-bs-theme="dark">
+<div class="container-fluid">
+<div class="navbar-brand" href="#">NCI Play Time</div>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+<ul class="navbar-nav">
+<li class="nav-item">
+<div class="nav-link active" aria-current="page">Welcome {{ name }}</div>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="{% url 'scmapp:user_logout' %}">Logout</a>
+</li>
+</ul>
 </div>
+</div>
+</nav>
+<!--<div class="container-fluid header text-center">-->
+<!--  NCI Play Time<br>-->
+<!--  Welcome {{ name }}<br>-->
+<!--  <a href="{% url 'scmapp:user_logout' %}" style="font-size:20;">Logout</a><br>-->
+<!--  <span style="font-size:18px">{{ status }}</span>-->
+<!--</div>-->
 
 <div class="container">
   <div class="row">

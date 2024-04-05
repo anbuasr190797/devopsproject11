@@ -4,7 +4,7 @@ from scmapp import views
 app_name = 'scmapp'
 
 urlpatterns = [
-    path('registration',views.index),
+    path('',views.index),
     path('user_home/',views.user_home),
     path('test',views.test,name='test'),
     path('login_user',views.login_user,name='login_user'),
