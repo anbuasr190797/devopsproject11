@@ -15,7 +15,6 @@ urlpatterns = [
     path('admin_home',views.admin_home,name='admin_home'),
     path('user_home',views.user_home,name='user_home'),
 
-    
     path('ground_booking',views.ground_booking,name='ground_booking'),
     path('db_ground_booking',views.db_ground_booking,name='db_ground_booking'),
 
