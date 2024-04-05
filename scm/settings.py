@@ -126,3 +126,4 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     STATIC_DIR,
 ]
+CSRF_TRUSTED_ORIGINS = ['https://e734d1d63b2f4592803cb711ec3bd683.vfs.cloud9.eu-west-1.amazonaws.com']
