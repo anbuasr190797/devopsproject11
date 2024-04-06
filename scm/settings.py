@@ -26,7 +26,7 @@ SECRET_KEY = 'czha6a=ow(iw^4%^orzg$)lo1riu@a(=abn)g(^g1scf8$qt6='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["scm-env.eba-3rvrkirw.us-west-2.elasticbeanstalk.com"]
+ALLOWED_HOSTS = ["9d21efeacc5146ba85516d1b5e06f787.vfs.cloud9.eu-west-1.amazonaws.com"]
 
 
 # Application definition
@@ -126,3 +126,4 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     STATIC_DIR,
 ]
+CSRF_TRUSTED_ORIGINS = ['https://e734d1d63b2f4592803cb711ec3bd683.vfs.cloud9.eu-west-1.amazonaws.com']
