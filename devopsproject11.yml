@@ -1,7 +1,10 @@
 version: 0.2
-
-
-
+env:
+    secrets-manager:
+        LOGIN: devopsproject11:sonartoken
+        HOST: devopsproject11:HOST
+        Organization: devopsproject11:Organization
+        Project: devopsproject11:Project
 phases:
 
   install:
@@ -38,13 +41,14 @@ phases:
 
     commands:
 
-      - mvn sonar:sonar -Dsonar.login=bfd742e2104bf35eb9a5fb98c98d6c85a3fd40d8 -Dsonar.host.url=https://sonarcloud.io -Dsonar.projectKey=devopsproject11 -Dsonar.organization=anbuasr190797 || true
+      - mvn sonar:sonar -Dsonar.login=$LOGIN -Dsonar.host.url=$HOST -Dsonar.projectKey=&Project -Dsonar.organization=&Organization || true
 
       - sleep 5
 
-      - curl https://sonarcloud.io/api/qualitygates/project_status?projectKey=devopsproject11 >result.json
+      - curl https://sonarcloud.io/api/qualitygates/project_status?projectKey=&Project >result.json
 
       - cat result.json
+
 
       - if [ $(jq -r '.projectStatus.status' result.json) = ERROR ] ; then $CODEBUILD_BUILD_SUCCEEDING -eq 0 ;fi
 
