@@ -41,11 +41,11 @@ phases:
 
     commands:
 
-      - mvn sonar:sonar -Dsonar.login=$LOGIN -Dsonar.host.url=$HOST -Dsonar.projectKey=&Project -Dsonar.organization=&Organization || true
+      - mvn sonar:sonar -Dsonar.login=$LOGIN -Dsonar.host.url=$HOST -Dsonar.projectKey=$Project -Dsonar.organization=$Organization || true
 
       - sleep 5
 
-      - curl https://sonarcloud.io/api/qualitygates/project_status?projectKey=&Project >result.json
+      - curl https://sonarcloud.io/api/qualitygates/project_status?projectKey=$Project >result.json
 
       - cat result.json
 
